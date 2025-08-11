@@ -37,4 +37,4 @@ Bu projeden yararlandıysanız emeğim adına projeye star atarsanız sevinirim.
 # Discord
 * [Discord Sunucumuz](discord.gg/siyahbeyaz)
 
-## NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır! DC:swenzyim
+## NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır! `DC:swenzyim`
