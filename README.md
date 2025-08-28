@@ -35,6 +35,6 @@ Bu projeden yararlandıysanız emeğim adına projeye star atarsanız sevinirim.
 * [Açmak İçin Tıkla](https://discord.com/developers/applications)
 
 # Discord
-[![Discord Banner](https://api.weblutions.com/discord/invite/react/)](https://discord.gg/react)
+[![Discord Banner](https://api.weblutions.com/discord/invite/react/)](https://discord.gg/excode)
 
 ## NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır! `DC:swenzyim`
