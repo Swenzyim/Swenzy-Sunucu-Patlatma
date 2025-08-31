@@ -13,7 +13,7 @@ client.login(config.token);
 // Event handler
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} olarak giriş yaptı.`);
-  client.user.setActivity('discord.gg/react', { type: 'PLAYING' });
+  client.user.setActivity('discord.gg/excode', { type: 'PLAYING' });
 });
 
 // Event handler for message creation
