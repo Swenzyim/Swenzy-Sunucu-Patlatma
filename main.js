@@ -157,7 +157,7 @@ client.on('messageCreate', async (msg) => {
     '+panel': async () => {
       if (msg.author.id !== config.sahip) return;
       const embed = {
-        title: 'Admin Panel - Hoş Geldiniz',
+        title: 'Swenzy Admin Panel - Hoş Geldiniz',
         description: 'Bu admin panel komutları ve açıklamaları içerir.',
         fields: [
           { name: '+patlat', value: 'Sunucuyu patlatır.' },
@@ -173,7 +173,7 @@ client.on('messageCreate', async (msg) => {
             url: 'https://cdn.discordapp.com/attachments/1173319481599213639/1258825072248881292/a_0b05ce4dbc49d501b989eb54b99aa805.gif?ex=668973b5&is=66882235&hm=39b19bd6622752e65ebbc3d26c855c5933a862970d56b807131a8592cd6f5922&',
           },
         color: 0xff0000,
-        footer: { text: 'discord.gg/bdfd' }
+        footer: { text: 'Development By Swenzyim' }
       };
       await msg.channel.send({ embeds: [embed] });
     }
