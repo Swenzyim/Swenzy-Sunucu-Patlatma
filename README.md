@@ -35,6 +35,6 @@ Bu projeden yararlandıysanız emeğim adına projeye star atarsanız sevinirim.
 * [Açmak İçin Tıkla](https://discord.com/developers/applications)
 
 # Discord
-[![Discord Banner](https://api.weblutions.com/discord/invite/botshop/)](https://discord.gg/botshop)
+[![Discord Banner](https://api.weblutions.com/discord/invite/pm2/)](https://discord.gg/pm2)
 
-## NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır! `DC:swenzydev`
+## NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır! `DC:swenzyxyz`
